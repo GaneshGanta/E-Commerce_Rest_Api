@@ -14,13 +14,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ecommerce.model.Cart;
+import com.ecommerce.model.Product;
+import com.ecommerce.model.ProductDto;
 import com.onestore.exception.CartException;
 import com.onestore.exception.CustomerException;
 import com.onestore.exception.LoginException;
 import com.onestore.exception.ProductException;
-import com.onestore.model.Cart;
-import com.onestore.model.Product;
-import com.onestore.model.ProductDto;
 import com.onestore.service.CartServices;
 
 @RestController

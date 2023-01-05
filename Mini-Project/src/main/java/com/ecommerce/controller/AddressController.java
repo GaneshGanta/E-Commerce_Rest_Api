@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ecommerce.model.Address;
 import com.onestore.exception.CustomerException;
 import com.onestore.exception.LoginException;
-import com.onestore.model.Address;
 import com.onestore.service.AddressService;
 
 import io.swagger.v3.oas.annotations.parameters.RequestBody;

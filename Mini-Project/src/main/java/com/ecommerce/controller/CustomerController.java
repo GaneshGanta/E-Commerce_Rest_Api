@@ -3,8 +3,9 @@ package com.ecommerce.controller;
 
 import java.util.List;
 import javax.validation.Valid;
+
+import com.ecommerce.model.Customer;
 import com.onestore.exception.CustomerException;
-import com.onestore.model.Customer;
 import com.onestore.serviceImplementation.CustomerServiceImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
