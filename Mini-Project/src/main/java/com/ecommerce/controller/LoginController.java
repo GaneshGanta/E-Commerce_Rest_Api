@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ecommerce.model.User;
-import com.onestore.serviceImplementation.LoginService;
+import com.ecommerce.serviceImplementation.LoginService;
 
 
 

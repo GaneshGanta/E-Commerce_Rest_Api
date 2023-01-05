@@ -2,26 +2,23 @@ package com.ecommerce.controller;
 
 import java.util.List;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ecommerce.exception.CustomerException;
+import com.ecommerce.exception.LoginException;
+import com.ecommerce.exception.ProductException;
 import com.ecommerce.model.Cart;
-import com.ecommerce.model.Product;
 import com.ecommerce.model.ProductDto;
-import com.onestore.exception.CartException;
-import com.onestore.exception.CustomerException;
-import com.onestore.exception.LoginException;
-import com.onestore.exception.ProductException;
-import com.onestore.service.CartServices;
+import com.ecommerce.service.CartServices;
+
 
 @RestController
 @RequestMapping(value="/cart")
@@ -38,17 +35,8 @@ public class CartContoller {
 		return new ResponseEntity<Cart>(updatedCart,HttpStatus.ACCEPTED);
 	}
 	
+	
 
-	
-	
-	
-// 	@PutMapping("/update/{pDtoId}/{q}/{key}")
-// 	public ResponseEntity<ProductDto>updateProductQuantityHandler(@PathVariable("pDtoId")Integer pDtoId,@PathVariable("q") Integer quantity,@PathVariable("key") String key) throws LoginException, CustomerException{
-		
-// 		           ProductDto product =Cservice.updateProductQuantity(pDtoId, quantity, key);
-		
-// 		return new ResponseEntity<ProductDto>(product,HttpStatus.ACCEPTED);
-// 	}
 	
 	@GetMapping("/view/{key}") 
 	public ResponseEntity<List<ProductDto>>viewAllProducts(@PathVariable("key") String key) throws LoginException, CustomerException,ProductException{

@@ -1,7 +1,6 @@
 package com.ecommerce.controller;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,16 +9,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ecommerce.exception.CustomerException;
+import com.ecommerce.exception.LoginException;
 import com.ecommerce.model.Address;
-import com.onestore.exception.CustomerException;
-import com.onestore.exception.LoginException;
-import com.onestore.service.AddressService;
-
-import io.swagger.v3.oas.annotations.parameters.RequestBody;
-import lombok.Delegate;
+import com.ecommerce.service.AddressService;
 
 
 @RestController

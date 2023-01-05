@@ -1,7 +1,5 @@
 package com.ecommerce.controller;
 
-
-
 import java.util.List;
 
 import javax.validation.Valid;
@@ -18,11 +16,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ecommerce.exception.CustomerException;
+import com.ecommerce.exception.LoginException;
+import com.ecommerce.exception.ProductException;
 import com.ecommerce.model.Product;
-import com.onestore.exception.CustomerException;
-import com.onestore.exception.LoginException;
-import com.onestore.exception.ProductException;
-import com.onestore.service.ProductService;
+import com.ecommerce.service.ProductService;
 
 
 @RestController
